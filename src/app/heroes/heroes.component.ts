@@ -11,7 +11,7 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
   
-  
+
   //Create a Hero interface starts here
   hero: Hero = {
     id: 1,

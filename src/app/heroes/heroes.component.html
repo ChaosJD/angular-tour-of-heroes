@@ -7,7 +7,16 @@
 <!-- Show the hero ends here-->
 
 <!-- Show the hero object starts here-->
-<h2>{{ hero.name }} Details</h2>
-<div><span>id: </span>{{ hero.id }}</div>
-<div><span>name: </span>{{ hero.name }}</div>
+
+
+  <!-- Show the hero object starts here-->
+  <!-- <h2>{{ hero.name }} Details</h2>7 -->
+  <!-- Show the hero object ends here-->
+  
+  <!-- Format with the UppercasePipe starts here-->
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <!-- Format with the UppercasePipe ends here-->
+
+  <div><span>id: </span>{{ hero.id }}</div>
+  <div><span>name: </span>{{ hero.name }}</div>
 <!-- Show the hero object ends here-->
