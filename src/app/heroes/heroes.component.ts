@@ -55,8 +55,16 @@ export class HeroesComponent implements OnInit {
   constructor(private heroService: HeroService) {}
   //Inject the HeroService ends here
 
+
+  //ngOnInit(): void {
+ // }
+
+  //Call it in ngOnInit() starts here
   ngOnInit(): void {
+    this.getHeroes();
   }
+  //Call it in ngOnInit() ends here
+
 
   //Add the click event handler starts here
   onSelect(hero: Hero): void {
@@ -66,8 +74,15 @@ export class HeroesComponent implements OnInit {
 
 
   //Add getHeroes() starts here
-  getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
-  }
+  //getHeroes(): void {
+    //this.heroes = this.heroService.getHeroes();
+  //}
   //Add getHeroes() ends here
+
+  //Subscribe in HeroesComponent starts here
+  getHeroes(): void {
+    this.heroService.getHeroes()
+        .subscribe(heroes => this.heroes = heroes);
+  }
+  //Subscribe in HeroesComponent ends here
 }
