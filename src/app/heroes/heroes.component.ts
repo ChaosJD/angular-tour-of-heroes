@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-//Displaying heroes starts here
-import { HEROES } from '../mock-heroes';
-//Displaying heroes ends here
 
 
 //Create a Hero interface starts here
 import { Hero } from '../hero';
 //Create a Hero interface ends here
 
+
+
+//Displaying heroes starts here
+import { HEROES } from '../mock-heroes';
+//Displaying heroes ends here
 
 @Component({
   selector: 'app-heroes',
@@ -16,6 +18,9 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
   
+  //Add the click event handler starts here
+  selectedHero?: Hero;
+  //Add the click event handler ends here
 
   //Displaying heroes starts here
   heroes = HEROES;
@@ -37,4 +42,9 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Add the click event handler starts here
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
+  //Add the click event handler ends here
 }
