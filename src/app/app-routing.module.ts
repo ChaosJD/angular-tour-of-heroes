@@ -28,6 +28,13 @@ const routes: Routes = [
   //Add the dashboard route starts here
   { path: 'dashboard', component: DashboardComponent },
   //Add the dashboard route ends here
+
+
+  //Add a default route starts here
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  //Add a default route ends here
+
+  
 ];
 
 @NgModule({
