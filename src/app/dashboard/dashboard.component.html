@@ -1,7 +1,14 @@
-<!-- <p>dashboard works!</p> --> <!-- comes by creating -->
+<!-- <p>dashboard works!</p> --> <!-- comes by creating!-->
 <h2>Top Heroes</h2>
 <div class="heroes-menu">
   <a *ngFor="let hero of heroes">
-    {{hero.name}}
+    {{ hero.name }}
   </a>
 </div>
+
+<!-- DashboardComponent hero links starts here-->
+<!-- <a *ngFor="let hero of heroes">
+  routerLink="/detail/{{hero.id}}">
+  {{hero.name}}
+</a>-->
+<!-- DashboardComponent hero links starts here ends here-->

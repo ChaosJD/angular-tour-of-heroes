@@ -42,13 +42,25 @@
 
 
       <!--Style the selected hero starts here-->
-      <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+      <!-- <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero"> --> <!-- deactivated for HeroesComponent hero links -->
       <!--Style the selected hero ends here-->
 
+
+      <!-- HeroesComponent hero links starts starts here -->
+      <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{ hero.id }}">
+      <!-- HeroesComponent hero links ends here-->
+
+
     <!--Add a click event binding ends here-->
+
+
     <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+    </a>
   </li>
 </ul>
+
+
 <!-- List heroes with *ngFor ends here-->
 
 

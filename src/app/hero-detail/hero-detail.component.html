@@ -5,15 +5,14 @@
 
 
 <!--The fix - hide empty details with *ngIf starts here-->
-<div *ngIf="hero">
+ <div *ngIf="hero">
     <!-- The fix - hide empty details with *ngIf ends here-->
-    <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
+    <h2>{{ hero.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{ hero.id }}</div>
     <div>
       <label for="hero-name">Hero name: </label>
-      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-    </div>
-    
+      <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name" />
+    <!-- </div> -->
     
 <!--The fix - hide empty details with *ngIf starts here-->
 </div>
@@ -21,3 +20,5 @@
     
     
     <!-- Add a details section ends here -->
+    <button (click)="goBack()">go back</button>
+</div>

@@ -11,11 +11,6 @@ import { HeroService } from '../hero.service';
 //Update HeroesComponent ends here
 
 
-//Displaying heroes starts here
-import { HEROES } from '../mock-heroes';
-//Displaying heroes ends here
-
-
 //Add additional messages to hero service starts here
 import { MessageService } from '../message.service';
 //Add additional messages to hero service ends here
@@ -28,7 +23,7 @@ import { MessageService } from '../message.service';
 export class HeroesComponent implements OnInit {
   
   //Add the click event handler starts here
-  selectedHero?: Hero;
+  //selectedHero?: Hero;
   //Add the click event handler ends here
 
   //Displaying heroes starts here
@@ -62,7 +57,7 @@ export class HeroesComponent implements OnInit {
 
 
 //Add additional messages to hero service starts here
-constructor(private heroService: HeroService, private messageService: MessageService) { }
+constructor(private heroService: HeroService, ) { } //private messageService: MessageService
 //Add additional messages to hero service ends here
 
   //ngOnInit(): void {
@@ -83,10 +78,10 @@ constructor(private heroService: HeroService, private messageService: MessageSer
 
 
 //Add additional messages to hero service starts here
-onSelect(hero: Hero): void {
-  this.selectedHero = hero;
-  this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-}
+//onSelect(hero: Hero): void {
+  //this.selectedHero = hero;
+  //this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+//}
 //Add additional messages to hero service ends here
 
 
