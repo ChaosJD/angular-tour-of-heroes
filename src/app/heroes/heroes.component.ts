@@ -63,4 +63,11 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = hero;
   }
   //Add the click event handler ends here
+
+
+  //Add getHeroes() starts here
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
+  //Add getHeroes() ends here
 }
