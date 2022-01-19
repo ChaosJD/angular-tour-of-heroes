@@ -15,6 +15,11 @@ import { HeroService } from '../hero.service';
 import { HEROES } from '../mock-heroes';
 //Displaying heroes ends here
 
+
+//Add additional messages to hero service starts here
+import { MessageService } from '../message.service';
+//Add additional messages to hero service ends here
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -52,9 +57,13 @@ export class HeroesComponent implements OnInit {
   //constructor() { }
 
   //Inject the HeroService starts here
-  constructor(private heroService: HeroService) {}
+  //constructor(private heroService: HeroService) {}
   //Inject the HeroService ends here
 
+
+//Add additional messages to hero service starts here
+constructor(private heroService: HeroService, private messageService: MessageService) { }
+//Add additional messages to hero service ends here
 
   //ngOnInit(): void {
  // }
@@ -67,10 +76,18 @@ export class HeroesComponent implements OnInit {
 
 
   //Add the click event handler starts here
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+ // onSelect(hero: Hero): void {
+   // this.selectedHero = hero;
+  //}
   //Add the click event handler ends here
+
+
+//Add additional messages to hero service starts here
+onSelect(hero: Hero): void {
+  this.selectedHero = hero;
+  this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+}
+//Add additional messages to hero service ends here
 
 
   //Add getHeroes() starts here
