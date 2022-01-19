@@ -6,6 +6,10 @@ import { Hero } from '../hero';
 //Create a Hero interface ends here
 
 
+//Update HeroesComponent starts here
+import { HeroService } from '../hero.service';
+//Update HeroesComponent ends here
+
 
 //Displaying heroes starts here
 import { HEROES } from '../mock-heroes';
@@ -23,8 +27,14 @@ export class HeroesComponent implements OnInit {
   //Add the click event handler ends here
 
   //Displaying heroes starts here
-  heroes = HEROES;
+  //heroes = HEROES;
   //Displaying heroes ends here
+
+  
+  //Update HeroesComponent starts here
+  heroes: Hero[] = [];
+  //Update HeroesComponent ends here
+
 
   //Create a Hero interface starts here
   //hero: Hero = {
