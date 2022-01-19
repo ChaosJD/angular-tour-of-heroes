@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+//Displaying heroes starts here
+import { HEROES } from '../mock-heroes';
+//Displaying heroes ends here
+
+
 //Create a Hero interface starts here
 import { Hero } from '../hero';
 //Create a Hero interface ends here
@@ -12,11 +17,15 @@ import { Hero } from '../hero';
 export class HeroesComponent implements OnInit {
   
 
+  //Displaying heroes starts here
+  heroes = HEROES;
+  //Displaying heroes ends here
+
   //Create a Hero interface starts here
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
+  //hero: Hero = {
+    //id: 1,
+    //name: 'Windstorm'
+  //};
   //Create a Hero interface ends here
 
 
