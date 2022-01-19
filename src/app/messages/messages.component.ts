@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+//Display the message form HeroService starts here
+import { MessageService } from '../message.service';
+//Display the message form HeroService ends here
 
 @Component({
   selector: 'app-messages',
@@ -7,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor() { }
+  //constructor() { } //default contructor by creating
+
+  //Display the message form HeroService starts here
+  constructor(public messageService: MessageService) {}
+  //Display the message form HeroService ends here
+
 
   ngOnInit(): void {
   }
