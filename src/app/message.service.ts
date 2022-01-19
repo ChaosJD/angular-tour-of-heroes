@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 
-export class MessageService {
+export class MessageService { // Writes in the Cache
 
   //constructor() { }
 
@@ -21,5 +21,5 @@ export class MessageService {
   }
   //Create the MessageService ends here
 
-  
+
 }
