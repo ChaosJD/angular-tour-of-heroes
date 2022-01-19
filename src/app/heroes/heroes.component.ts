@@ -30,7 +30,7 @@ export class HeroesComponent implements OnInit {
   //heroes = HEROES;
   //Displaying heroes ends here
 
-  
+
   //Update HeroesComponent starts here
   heroes: Hero[] = [];
   //Update HeroesComponent ends here
@@ -47,7 +47,13 @@ export class HeroesComponent implements OnInit {
   //Add a hero property starts here
   //hero = 'Windstorm';
   //Add a hero property ends here
-  constructor() { }
+
+
+  //constructor() { }
+
+  //Inject the HeroService starts here
+  constructor(private heroService: HeroService) {}
+  //Inject the HeroService ends here
 
   ngOnInit(): void {
   }
