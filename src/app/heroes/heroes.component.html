@@ -18,5 +18,13 @@
   <!-- Format with the UppercasePipe ends here-->
 
   <div><span>id: </span>{{ hero.id }}</div>
-  <div><span>name: </span>{{ hero.name }}</div>
+
+  
+  <!-- <div><span>name: </span>{{ hero.name }}</div> -->
+  <!-- Two-way binding starts here-->
+  <div>
+    <label for="name">Hero name: </label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+  </div>
+  <!-- Two-way binding ends here-->
 <!-- Show the hero object ends here-->
